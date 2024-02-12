@@ -1,0 +1,16 @@
+#coluna-direita {
+    background-color: rgb(231, 229, 229);   
+}
+
+#coluna-esquerda {
+    background-color: #f4346c;
+    height: 100vh;
+}
+
+@media (min-width: 768px) {
+    #coluna-esquerda {
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+}

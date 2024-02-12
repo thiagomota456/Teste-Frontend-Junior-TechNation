@@ -1,0 +1,11 @@
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.row .col-md-6 {
+    text-align: left;
+    align-items: left;
+    flex-wrap: nowrap;
+    margin: 2%;
+}
