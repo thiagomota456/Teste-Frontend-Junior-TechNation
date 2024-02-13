@@ -5,3 +5,5 @@
 @import 'sidebar.css';
 @import 'search.css';
 @import 'profile.css';
+@import 'colapsebar.css';
+@import url('../nodata/style.css');

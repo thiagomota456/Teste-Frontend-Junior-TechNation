@@ -48,26 +48,24 @@
                         </div>
                     </nav>
                     
-                    <div class="collapse navbar-collapse p-3" id="navbarToggleExternalContent">
+                    <div class="collapse navbar-collapse p-3 d-md-none" id="navbarToggleExternalContent">
                         <div class="custom-search-bar" id="small-custom-search-bar">
                             <input type="text" placeholder="Pesquisar aqui">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <div>
-                            <!--
-                            <div id="lista-colapse">
-                                <ul>
-                                    <li><a href="#" onclick="toggleClasscListaColapse(event)"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
-                                    <li><a href="#" onclick="toggleClasscListaColapse(event)"><i class="fa-solid fa-users"></i>Customers</a></li>
-                                    <li><a href="#" onclick="toggleClasscListaColapse(event)"><i class="fa-solid fa-list-check"></i>Projects</a></li>
-                                    <li><a href="#" onclick="toggleClasscListaColapse(event)"><i class="fa-solid fa-bag-shopping"></i>Orders</a></li>
-                                    <li><a href="#" onclick="toggleClasscListaColapse(event)"><i class="fa-solid fa-circle-user"></i>Accounts</a></li>
-                                    <li><a href="#" onclick="toggleClasscListaColapse(event)"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
-                                    <li><a href="#" onclick="toggleClasscListaColapse(event)"><i class="fa-regular fa-clipboard"></i>Tasks</a></li>
-                                </ul>
-                            </div>
-                            -->
+                        
+                        <div id="lista-colapse">
+                            <ul>
+                                <li id="item-da-lista-colapse-selecionado" onclick="toggleClasscListaColapse(event)"><a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+                                <li  onclick="toggleClasscListaColapse(event)"><a href="#"><i class="fa-solid fa-users"></i>Customers</a></li>
+                                <li  onclick="toggleClasscListaColapse(event)"><a href="#"><i class="fa-solid fa-list-check"></i>Projects</a></li>
+                                <li  onclick="toggleClasscListaColapse(event)"><a href="#"><i class="fa-solid fa-bag-shopping"></i>Orders</a></li>
+                                <li  onclick="toggleClasscListaColapse(event)"><a href="#"><i class="fa-solid fa-circle-user"></i>Accounts</a></li>
+                                <li  onclick="toggleClasscListaColapse(event)"><a href="#"><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
+                                <li  onclick="toggleClasscListaColapse(event)"><a href="#"><i class="fa-regular fa-clipboard"></i>Tasks</a></li>
+                            </ul>
                         </div>
+                        
                         <div class="profile pt-3" id="small-profile">
                             <div class="avatar">
                                 <img src="img/perfil.jpg" alt="Foto de Perfil">

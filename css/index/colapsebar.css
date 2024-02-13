@@ -1,0 +1,33 @@
+#lista-colapse{
+    text-decoration: none;
+    margin: 0 auto; 
+}
+
+#lista-colapse ul{
+    padding-top: 15px;
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+#lista-colapse ul li{
+    text-align: center;
+    padding: 3%;
+}
+
+#lista-colapse ul li a{
+    color: black;
+}
+
+#lista-colapse ul li a i{
+    padding-right: 2%;
+}
+
+#lista-colapse ul li:hover,
+#lista-colapse ul li[id="item-da-lista-colapse-selecionado"]{
+    background-color: black;
+}
+
+#lista-colapse ul li:hover a,
+#lista-colapse ul li[id="item-da-lista-colapse-selecionado"] a{
+    color: white;
+}

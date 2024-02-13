@@ -13,8 +13,14 @@ function toggleClass(event) {
 
 }
 
-function toggleClasscListaColapse(){
-
+function toggleClasscListaColapse(event) {
+    var elementoSelecionadoAnteriormente = document.getElementById("item-da-lista-colapse-selecionado");
+    if (elementoSelecionadoAnteriormente) {
+        elementoSelecionadoAnteriormente.removeAttribute("id");
+    }
+    
+    var elementoClicado = event.target.parentElement;
+    elementoClicado.id = "item-da-lista-colapse-selecionado";
 }
 
 function setConteudo(pagePath){
@@ -25,4 +31,5 @@ function setConteudo(pagePath){
 
 //Inicilização defalt por enqquanto
 //$("#conteudo").load("../../lista_de_notas_emitidas.html");
-$("#conteudo").load("../../dashboard.html");
+//$("#conteudo").load("../../dashboard.html");
+$("#conteudo").load("../../nodata.html");
