@@ -13,5 +13,16 @@ function toggleClass(event) {
 
 }
 
+function toggleClasscListaColapse(){
+
+}
+
+function setConteudo(pagePath){
+
+    documen.querySelector('#conteudo') = "";
+    $("#conteudo").load(pagePath);
+}
+
+//Inicilização defalt por enqquanto
 //$("#conteudo").load("../../lista_de_notas_emitidas.html");
 $("#conteudo").load("../../dashboard.html");
