@@ -20,3 +20,7 @@
     font-size: 18px;
     color: #555;
 }
+
+#small-custom-search-bar .custom-search-bar input[type="text"]{ 
+    width: 50%;
+}

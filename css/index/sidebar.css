@@ -21,25 +21,38 @@ p {
 #lista-coluna-esquerda {
     text-align: left;
 }
-
-#lista-coluna-esquerda ul {
+#lista-coluna-colapse{
+    padding-top: 20px;
+}
+#lista-coluna-esquerda ul,
+#lista-coluna-colapse ul
+{
     list-style-type: none;
     padding: 0;
 }
 
-#lista-coluna-esquerda ul li {
-    padding-bottom: 20px;
-    padding-left: 20px;
+#lista-coluna-esquerda ul li,
+#lista-coluna-colapse ul li
+{
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin: 10px;
 }
 
-#lista-coluna-esquerda ul li a {
+#lista-coluna-esquerda ul li a{
     text-decoration: none; 
     color: white;
     font-size: 16px;
 }
+#lista-coluna-colapse ul li a{
+    text-decoration: none; 
+    color: black;
+    font-size: 16px;
+    padding: 25px;
+}
 
 #lista-coluna-esquerda ul li:hover,
-.selected-lista-coluna-esquerda{
+#lista-coluna-esquerda .selected-lista-coluna-esquerda{
     background-color: white;
     border-radius: 60px;
     text-align: center;
@@ -47,7 +60,21 @@ p {
     margin-bottom: 10px;
 }
 
+#lista-coluna-colapse ul li:hover,
+#lista-coluna-colapse .selected-lista-coluna-esquerda{
+    background-color: black;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 10%;
+}
+
 #lista-coluna-esquerda ul li:hover a,
-.color-black{
+#lista-coluna-esquerda .colorir-link{
     color: black !important;
+}
+
+#lista-coluna-colapse ul li:hover a,
+#lista-coluna-colapse .colorir-link{
+    color: white !important;
+    margin-bottom: 15%;
 }

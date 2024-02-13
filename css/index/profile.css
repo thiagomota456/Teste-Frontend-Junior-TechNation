@@ -36,3 +36,13 @@
 .usertype {
     font-style: italic;
 }
+
+#small-profile{
+    align-items: center;
+    justify-content: center;
+    margin-left: 3%;
+}
+#small-profile .details{
+    margin-top: 0;
+    padding-bottom: 25px;
+}
