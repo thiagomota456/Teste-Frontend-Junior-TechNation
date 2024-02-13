@@ -31,3 +31,7 @@
 #lista-colapse ul li[id="item-da-lista-colapse-selecionado"] a{
     color: white;
 }
+
+#lista-colapse ul{
+    padding: 0;
+}
