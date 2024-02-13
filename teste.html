@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <style>
+    .container {
+      margin-top: 50px;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Valor total das notas emitidas</h5>
+            <p class="card-text" id="totalNotes">R$ 0.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Valor total das notas emitidas, mas sem cobrança feita</h5>
+            <p class="card-text" id="unbilledNotes">R$ 0.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Valor total das notas vencidas - Inadimplência</h5>
+            <p class="card-text" id="overdueNotes">R$ 0.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Valor total das notas a vencer</h5>
+            <p class="card-text" id="dueNotes">R$ 0.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Valor total das notas pagas</h5>
+            <p class="card-text" id="paidNotes">R$ 0.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <canvas id="inadimplenciaChart"></canvas>
+      </div>
+      <div class="col-md-6">
+        <canvas id="receitaChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simulando dados
+    const data = {
+      totalNotes: 10000,
+      unbilledNotes: 2000,
+      overdueNotes: 1500,
+      dueNotes: 3000,
+      paidNotes: 6000,
+      inadimplenciaData: [500, 600, 700, 800, 900],
+      receitaData: [2000, 3000, 4000, 5000, 6000]
+    };
+
+    // Atualizando valores dos indicadores
+    function updateIndicators() {
+      document.getElementById('totalNotes').textContent = `R$ ${data.totalNotes.toFixed(2)}`;
+      document.getElementById('unbilledNotes').textContent = `R$ ${data.unbilledNotes.toFixed(2)}`;
+      document.getElementById('overdueNotes').textContent = `R$ ${data.overdueNotes.toFixed(2)}`;
+      document.getElementById('dueNotes').textContent = `R$ ${data.dueNotes.toFixed(2)}`;
+      document.getElementById('paidNotes').textContent = `R$ ${data.paidNotes.toFixed(2)}`;
+    }
+
+    // Atualizando gráfico de inadimplência
+    function updateInadimplenciaChart() {
+      var ctx = document.getElementById('inadimplenciaChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+          datasets: [{
+            label: 'Inadimplência',
+            data: data.inadimplenciaData,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+        }
+      });
+    }
+
+    // Atualizando gráfico de receita
+    function updateReceitaChart() {
+      var ctx = document.getElementById('receitaChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai'],
+          datasets: [{
+            label: 'Receita Recebida',
+            data: data.receitaData,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+        }
+      });
+    }
+
+    // Chamando funções para atualizar o dashboard
+    updateIndicators();
+    updateInadimplenciaChart();
+    updateReceitaChart();
+  </script>
+</body>
+</html>

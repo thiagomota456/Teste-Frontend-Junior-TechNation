@@ -2,9 +2,11 @@
     background-color: rgb(231, 229, 229);   
 }
 
+#row-principal{
+    background-color: #f4346c;
+}
 #coluna-esquerda {
     background-color: #f4346c;
-    height: 100vh;
 }
 
 @media (min-width: 768px) {

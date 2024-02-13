@@ -1,0 +1,59 @@
+<script src="script/notas_emitidas/chart.js"></script>
+
+<div class="container">
+    <div class="row p-2">
+        <div class="col-md-4 p-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Valor total das notas emitidas</h5>
+                    <p class="card-text" id="totalNotes">R$ 0.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Valor total das notas emitidas, mas sem cobrança feita</h5>
+                    <p class="card-text" id="unbilledNotes">R$ 0.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 p-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Valor total das notas vencidas - Inadimplência</h5>
+                    <p class="card-text" id="overdueNotes">R$ 0.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row p-2">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Valor total das notas a vencer</h5>
+                    <p class="card-text" id="dueNotes">R$ 0.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Valor total das notas pagas</h5>
+                    <p class="card-text" id="paidNotes">R$ 0.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex flex-sm-wrap justify-content-center">
+        <div class="col-md-6">
+        <canvas id="inadimplenciaChart"></canvas>
+        </div>
+        <div class="col-md-6">
+        <canvas id="receitaChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="script/dashboard/script.js"></script>
+

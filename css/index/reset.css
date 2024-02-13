@@ -2,3 +2,7 @@
     margin: 0;
     border: 0;
 }
+
+.full-height {
+    height: 100vh;
+}

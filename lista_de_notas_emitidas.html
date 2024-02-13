@@ -1,0 +1,96 @@
+<div class="container">
+  <h2>Lista de Notas Emitidas</h2>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="monthEmission">Mês de Emissão</label>
+      <select id="monthEmission" class="form-control">
+        <option value="">Todos</option>
+        <option value="01">Janeiro</option>
+        <option value="02">Fevereiro</option>
+        <option value="03">Março</option>
+        <option value="04">Abril</option>
+        <option value="05">Maio</option>
+        <option value="06">Junho</option>
+        <option value="07">Julho</option>
+        <option value="08">Agosto</option>
+        <option value="09">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+      </select>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="monthBilling">Mês da Cobrança</label>
+      <select id="monthBilling" class="form-control">
+        <option value="">Todos</option>
+        <option value="01">Janeiro</option>
+        <option value="02">Fevereiro</option>
+        <option value="03">Março</option>
+        <option value="04">Abril</option>
+        <option value="05">Maio</option>
+        <option value="06">Junho</option>
+        <option value="07">Julho</option>
+        <option value="08">Agosto</option>
+        <option value="09">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+      </select>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="monthPayment">Mês do Pagamento</label>
+      <select id="monthPayment" class="form-control">
+        <option value="">Todos</option>
+        <option value="01">Janeiro</option>
+        <option value="02">Fevereiro</option>
+        <option value="03">Março</option>
+        <option value="04">Abril</option>
+        <option value="05">Maio</option>
+        <option value="06">Junho</option>
+        <option value="07">Julho</option>
+        <option value="08">Agosto</option>
+        <option value="09">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+      </select>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="statusFilter">Status da Nota</label>
+      <select id="statusFilter" class="form-control">
+        <option value="">Todos</option>
+        <option value="Emitida">Emitida</option>
+        <option value="Cobrança realizada">Cobrança realizada</option>
+        <option value="Pagamento em atraso">Pagamento em atraso</option>
+        <option value="Pagamento realizado">Pagamento realizado</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="searchInput" class="col-sm-2 col-form-label">Pesquisar:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="searchInput" placeholder="Pesquisar por nome do pagador, número da nota, etc.">
+    </div>
+  </div>
+  <div class="table-container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome do Pagador</th>
+          <th>Número da Nota</th>
+          <th>Data de Emissão</th>
+          <th>Data da Cobrança</th>
+          <th>Data do Pagamento</th>
+          <th>Valor da Nota</th>
+          <th>Documento da Nota Fiscal</th>
+          <th>Documento do Boleto Bancário</th>
+          <th>Status da Nota</th>
+        </tr>
+      </thead>
+      <tbody id="notesList">
+        <!-- Notas fiscais -->
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="script/notas_emitidas/script.js"></script>
