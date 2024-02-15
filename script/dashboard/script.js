@@ -1,4 +1,3 @@
-
 const data = {
   totalNotes: 10000,
   unbilledNotes: 2000,

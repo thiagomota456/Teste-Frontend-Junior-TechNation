@@ -48,7 +48,7 @@ window.addEventListener('load', function() {
 
     if (!sessionStorage.getItem('primeiraVez')) {
         //Carregar pagina no data
-        $("#conteudo").load("../../nodata.html");
+        $("#conteudo").load("../../dashboard.html");
         
         //Limpar seleções
         const selected = document.querySelectorAll('.selected-lista-coluna-esquerda');
@@ -83,7 +83,4 @@ function buscarTexto(elementoPai, texto) {
     return resultados;
 }
 
-//Inicilização defalt por enqquanto
-//$("#conteudo").load("../../lista_de_notas_emitidas.html");
-//$("#conteudo").load("../../dashboard.html");
-$("#conteudo").load("../../nodata.html");
+$("#conteudo").load("../../dashboard.html");
