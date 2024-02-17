@@ -15,7 +15,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="script/dashboard/chart.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -29,7 +28,7 @@
           <div id="lista-coluna-esquerda">
             <ul>
               <li onclick="toggleClass(event)">
-                <a href="dashboard.html"
+                <a href="index.html"
                   ><i class="fa-solid fa-gauge"></i>Dashboard</a
                 >
               </li>
@@ -99,29 +98,40 @@
 
                   <div id="lista-colapse">
                     <ul>
-                      <li onclick="toggleClasscListaColapse(event)">
-                        <a href="dashboard.html"
-                          ><i class="fa-solid fa-gauge"></i>Dashboard</a
-                        >
+                      <li
+                        onclick="toggleClasscListaColapse(event, 'index.html')"
+                      >
+                        <a><i class="fa-solid fa-gauge"></i>Dashboard</a>
                       </li>
-                      <li onclick="toggleClasscListaColapse(event)">
+                      <li
+                        onclick="toggleClasscListaColapse(event, 'none_customers.html')"
+                      >
                         <a><i class="fa-solid fa-users"></i>Customers</a>
                       </li>
-                      <li onclick="toggleClasscListaColapse(event)">
+                      <li
+                        onclick="toggleClasscListaColapse(event, 'none_projects.html')"
+                      >
                         <a><i class="fa-solid fa-list-check"></i>Projects</a>
                       </li>
-                      <li onclick="toggleClasscListaColapse(event)">
-                        <a href="lista_de_notas_emitidas.html"
-                          ><i class="fa-solid fa-bag-shopping"></i>Orders</a
-                        >
+                      <li
+                        onclick="toggleClasscListaColapse(event, 'lista_de_notas_emitidas.html')"
+                      >
+                        <a><i class="fa-solid fa-bag-shopping"></i>Orders</a>
                       </li>
-                      <li onclick="toggleClasscListaColapse(event)">
+                      <li
+                        onclick="toggleClasscListaColapse(event, 'none_accounts.html')"
+                      >
                         <a><i class="fa-solid fa-circle-user"></i>Accounts</a>
                       </li>
-                      <li onclick="toggleClasscListaColapse(event)">
+                      <li
+                        id="item-da-lista-colapse-selecionado"
+                        onclick="toggleClasscListaColapse(event, 'none_inventory.html')"
+                      >
                         <a><i class="fa-solid fa-warehouse"></i>Inventory</a>
                       </li>
-                      <li onclick="toggleClasscListaColapse(event)">
+                      <li
+                        onclick="toggleClasscListaColapse(event, 'none_tasks.html')"
+                      >
                         <a><i class="fa-regular fa-clipboard"></i>Tasks</a>
                       </li>
                     </ul>
@@ -162,62 +172,14 @@
 
           <div id="conteudo" style="height: 100vh">
             <div class="container">
-              <div class="row p-2">
-                <div class="col-md-4 p-2">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Valor total das notas emitidas</h5>
-                      <p class="card-text" id="totalNotes">R$ 0.00</p>
+              <div class="row mt-5">
+                <div class="col">
+                  <div class="centered-text">
+                    <div class="icon-fix">
+                      <i class="fas fa-solid fa-wrench"></i>
                     </div>
+                    <h1>No Data</h1>
                   </div>
-                </div>
-                <div class="col-md-4 p-2">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">
-                        Valor total das notas emitidas, mas sem cobrança feita
-                      </h5>
-                      <p class="card-text" id="unbilledNotes">R$ 0.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 p-2">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">
-                        Valor total das notas vencidas - Inadimplência
-                      </h5>
-                      <p class="card-text" id="overdueNotes">R$ 0.00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row p-2">
-                <div class="col-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Valor total das notas a vencer</h5>
-                      <p class="card-text" id="dueNotes">R$ 0.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Valor total das notas pagas</h5>
-                      <p class="card-text" id="paidNotes">R$ 0.00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="row d-flex flex-md-nowrap flex-sm-wrap justify-content-center align-items-center"
-              >
-                <div class="col-md-5 p-0 align-items-center">
-                  <canvas id="inadimplenciaChart"></canvas>
-                </div>
-                <div class="col-md-5 p-0 align-items-center">
-                  <canvas id="receitaChart"></canvas>
                 </div>
               </div>
             </div>
@@ -227,7 +189,6 @@
     </div>
 
     <script src="script/index/script.js"></script>
-    <script src="script/dashboard/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

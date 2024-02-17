@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index/styles.css" />
+
     <title>Página Bootstrap Responsiva</title>
     <link
       rel="stylesheet"
@@ -17,8 +18,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row" id="row-principal" style="overflow-x: hidden">
+    <div class="container-fluid" style="height: 100vh">
+      <div class="row" id="row-principal" style="height: 100vh">
         <div
           id="coluna-esquerda"
           class="col-md-2 text-light d-none d-md-block p-0"
@@ -27,8 +28,11 @@
 
           <div id="lista-coluna-esquerda">
             <ul>
-              <li onclick="toggleClass(event)">
-                <a href="dashboard.html"
+              <li
+                class="selected-lista-coluna-esquerda"
+                onclick="toggleClass(event)"
+              >
+                <a class="colorir-link" href="index.html"
                   ><i class="fa-solid fa-gauge"></i>Dashboard</a
                 >
               </li>
@@ -56,7 +60,7 @@
           </div>
         </div>
 
-        <div id="coluna-direita" class="col-md-10 px-0">
+        <div id="coluna-direita" class="col-md-10 px-0" style="height: 100vh">
           <div
             class="row barra-de-nav-principal justify-content-center justify-content-md-left"
           >
@@ -99,29 +103,42 @@
                   <div id="lista-colapse">
                     <ul>
                       <li
-                        onclick="toggleClasscListaColapse(event, 'dashboard.html')"
+                        id="item-da-lista-colapse-selecionado"
+                        onclick="toggleClasscListaColapse(event)"
                       >
-                        <a><i class="fa-solid fa-gauge"></i>Dashboard</a>
+                        <a href="index.html"
+                          ><i class="fa-solid fa-gauge"></i>Dashboard</a
+                        >
                       </li>
                       <li onclick="toggleClasscListaColapse(event)">
-                        <a><i class="fa-solid fa-users"></i>Customers</a>
+                        <a href="none_customers.html"
+                          ><i class="fa-solid fa-users"></i>Customers</a
+                        >
                       </li>
                       <li onclick="toggleClasscListaColapse(event)">
-                        <a><i class="fa-solid fa-list-check"></i>Projects</a>
-                      </li>
-                      <li
-                        onclick="toggleClasscListaColapse(event, 'lista_de_notas_emitidas.html')"
-                      >
-                        <a><i class="fa-solid fa-bag-shopping"></i>Orders</a>
+                        <a href="none_projects.html"
+                          ><i class="fa-solid fa-list-check"></i>Projects</a
+                        >
                       </li>
                       <li onclick="toggleClasscListaColapse(event)">
-                        <a><i class="fa-solid fa-circle-user"></i>Accounts</a>
+                        <a href="lista_de_notas_emitidas.html"
+                          ><i class="fa-solid fa-bag-shopping"></i>Orders</a
+                        >
                       </li>
                       <li onclick="toggleClasscListaColapse(event)">
-                        <a><i class="fa-solid fa-warehouse"></i>Inventory</a>
+                        <a href="none_accounts.html"
+                          ><i class="fa-solid fa-circle-user"></i>Accounts</a
+                        >
                       </li>
                       <li onclick="toggleClasscListaColapse(event)">
-                        <a><i class="fa-regular fa-clipboard"></i>Tasks</a>
+                        <a href="none_inventory.html"
+                          ><i class="fa-solid fa-warehouse"></i>Inventory</a
+                        >
+                      </li>
+                      <li onclick="toggleClasscListaColapse(event)">
+                        <a href="none_tasks.html"
+                          ><i class="fa-regular fa-clipboard"></i>Tasks</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -159,19 +176,12 @@
             </div>
           </div>
 
-          <div id="conteudo" style="height: 100vh">
-            <div class="container">
-              <div class="row mt-5">
-                <div class="col">
-                  <div class="centered-text">
-                    <div class="icon-fix">
-                      <i class="fas fa-solid fa-wrench"></i>
-                    </div>
-                    <h1>No Data</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="row" id="conteudo">
+            <object
+              type="text/html"
+              data="dash.html"
+              style="height: 100%"
+            ></object>
           </div>
         </div>
       </div>
