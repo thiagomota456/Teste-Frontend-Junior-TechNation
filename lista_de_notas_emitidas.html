@@ -40,8 +40,11 @@
               <li onclick="toggleClass(event)">
                 <a><i class="fa-solid fa-list-check"></i>Projects</a>
               </li>
-              <li onclick="toggleClass(event)">
-                <a href="lista_de_notas_emitidas.html"
+              <li
+                class="selected-lista-coluna-esquerda"
+                onclick="toggleClass(event)"
+              >
+                <a class="colorir-link" href="lista_de_notas_emitidas.html"
                   ><i class="fa-solid fa-bag-shopping"></i>Orders</a
                 >
               </li>
@@ -112,6 +115,7 @@
                         <a><i class="fa-solid fa-list-check"></i>Projects</a>
                       </li>
                       <li
+                        id="item-da-lista-colapse-selecionado"
                         onclick="toggleClasscListaColapse(event, 'lista_de_notas_emitidas.html')"
                       >
                         <a><i class="fa-solid fa-bag-shopping"></i>Orders</a>
