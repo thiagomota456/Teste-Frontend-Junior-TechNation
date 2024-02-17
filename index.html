@@ -3,125 +3,190 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index/styles.css">
+    <link rel="stylesheet" href="css/index/styles.css" />
     <title>Página Bootstrap Responsiva</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <script defer src="https://kit.fontawesome.com/cac7eabb61.js" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/cac7eabb61.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
   </head>
   <body>
-
     <div class="container-fluid">
+      <div class="row" id="row-principal" style="overflow-x: hidden">
+        <div
+          id="coluna-esquerda"
+          class="col-md-2 text-light d-none d-md-block p-0"
+        >
+          <p><i class="fa-solid fa-dragon"></i>AccounsulftV2</p>
 
-      <div class="row" id="row-principal"  style="overflow-x: hidden;">
-
-        <div id="coluna-esquerda" class="col-md-2 text-light d-none d-md-block p-0">
-            <p><i class="fa-solid fa-dragon"></i>AccounsulftV2</p>
-
-            <div id="lista-coluna-esquerda">
-                <ul>
-                    <li onclick="toggleClass(event)"><a><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
-                    <li onclick="toggleClass(event)"><a><i class="fa-solid fa-users"></i>Customers</a></li>
-                    <li onclick="toggleClass(event)"><a><i class="fa-solid fa-list-check"></i>Projects</a></li>
-                    <li onclick="toggleClass(event)"><a><i class="fa-solid fa-bag-shopping"></i>Orders</a></li>
-                    <li onclick="toggleClass(event)"><a><i class="fa-solid fa-circle-user"></i>Accounts</a></li>
-                    <li onclick="toggleClass(event)"><a><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
-                    <li onclick="toggleClass(event)"><a><i class="fa-regular fa-clipboard"></i>Tasks</a></li>
-                </ul>
-            </div>
-
+          <div id="lista-coluna-esquerda">
+            <ul>
+              <li onclick="toggleClass(event)">
+                <a href="dashboard.html"
+                  ><i class="fa-solid fa-gauge"></i>Dashboard</a
+                >
+              </li>
+              <li onclick="toggleClass(event)">
+                <a><i class="fa-solid fa-users"></i>Customers</a>
+              </li>
+              <li onclick="toggleClass(event)">
+                <a><i class="fa-solid fa-list-check"></i>Projects</a>
+              </li>
+              <li onclick="toggleClass(event)">
+                <a href="lista_de_notas_emitidas.html"
+                  ><i class="fa-solid fa-bag-shopping"></i>Orders</a
+                >
+              </li>
+              <li onclick="toggleClass(event)">
+                <a><i class="fa-solid fa-circle-user"></i>Accounts</a>
+              </li>
+              <li onclick="toggleClass(event)">
+                <a><i class="fa-solid fa-warehouse"></i>Inventory</a>
+              </li>
+              <li onclick="toggleClass(event)">
+                <a><i class="fa-regular fa-clipboard"></i>Tasks</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div id="coluna-direita" class="col-md-10 px-0">
-            <div class="row barra-de-nav-principal justify-content-center justify-content-md-left">
-                <div class="col-md-3 mt-3">
-                    
-                    <div class="row">
-                        <div class="col-6">
-                            <nav class="navbar navbar-light">
-                                <div class="container-fluid">
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                </div>
-                            </nav>
-                        </div>
-                        <div class="col-6">
-                            <div>
-                                <p id="menu-selected"></p>
-                            </div>
-                        </div>
+          <div
+            class="row barra-de-nav-principal justify-content-center justify-content-md-left"
+          >
+            <div class="col-md-3 mt-3">
+              <div class="row">
+                <div class="col-6">
+                  <nav class="navbar navbar-light">
+                    <div class="container-fluid">
+                      <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarToggleExternalContent"
+                        aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                      >
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
                     </div>
-
-                    <div class="row p-0 m-0">
-                        <div class="collapse navbar-collapse p-3 d-md-none" id="navbarToggleExternalContent">
-                            <div class="custom-search-bar" id="small-custom-search-bar">
-                                <input type="text" placeholder="Pesquisar aqui">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            
-                            <div id="lista-colapse">
-                                <ul>
-                                    <li onclick="toggleClasscListaColapse(event)"><a><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
-                                    <li onclick="toggleClasscListaColapse(event)"><a><i class="fa-solid fa-users"></i>Customers</a></li>
-                                    <li onclick="toggleClasscListaColapse(event)"><a><i class="fa-solid fa-list-check"></i>Projects</a></li>
-                                    <li onclick="toggleClasscListaColapse(event)"><a><i class="fa-solid fa-bag-shopping"></i>Orders</a></li>
-                                    <li onclick="toggleClasscListaColapse(event)"><a><i class="fa-solid fa-circle-user"></i>Accounts</a></li>
-                                    <li onclick="toggleClasscListaColapse(event)"><a><i class="fa-solid fa-warehouse"></i>Inventory</a></li>
-                                    <li onclick="toggleClasscListaColapse(event)"><a><i class="fa-regular fa-clipboard"></i>Tasks</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="profile pt-3" id="small-profile">
-                                <div class="avatar">
-                                    <img src="img/perfil.jpg" alt="Foto de Perfil">
-                                </div>
-                                <div class="details pt-3">
-                                    <div class="username">Thiago Soares Mota</div>
-                                    <div class="usertype">Super soberano admin</div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    
+                  </nav>
                 </div>
-
-                <div class="col-md-5 mt-3 d-none d-md-block">
-                    <div class="custom-search-bar">
-                        <input type="text" placeholder="Pesquisar aqui">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
+                <div class="col-6">
+                  <div>
+                    <p id="menu-selected"></p>
+                  </div>
                 </div>
+              </div>
 
-                <div class="col-md-4 mt-3 d-none d-md-block">
-                    <div class="profile">
-                        <div class="avatar">
-                            <img src="img/perfil.jpg" alt="Foto de Perfil">
-                        </div>
-                        <div class="details">
-                            <div class="username">Thiago Soares Mota</div>
-                            <div class="usertype">Super soberano admin</div>
-                        </div>
+              <div class="row p-0 m-0">
+                <div
+                  class="collapse navbar-collapse p-3 d-md-none"
+                  id="navbarToggleExternalContent"
+                >
+                  <div class="custom-search-bar" id="small-custom-search-bar">
+                    <input type="text" placeholder="Pesquisar aqui" />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+
+                  <div id="lista-colapse">
+                    <ul>
+                      <li
+                        onclick="toggleClasscListaColapse(event, 'dashboard.html')"
+                      >
+                        <a><i class="fa-solid fa-gauge"></i>Dashboard</a>
+                      </li>
+                      <li onclick="toggleClasscListaColapse(event)">
+                        <a><i class="fa-solid fa-users"></i>Customers</a>
+                      </li>
+                      <li onclick="toggleClasscListaColapse(event)">
+                        <a><i class="fa-solid fa-list-check"></i>Projects</a>
+                      </li>
+                      <li
+                        onclick="toggleClasscListaColapse(event, 'lista_de_notas_emitidas.html')"
+                      >
+                        <a><i class="fa-solid fa-bag-shopping"></i>Orders</a>
+                      </li>
+                      <li onclick="toggleClasscListaColapse(event)">
+                        <a><i class="fa-solid fa-circle-user"></i>Accounts</a>
+                      </li>
+                      <li onclick="toggleClasscListaColapse(event)">
+                        <a><i class="fa-solid fa-warehouse"></i>Inventory</a>
+                      </li>
+                      <li onclick="toggleClasscListaColapse(event)">
+                        <a><i class="fa-regular fa-clipboard"></i>Tasks</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="profile pt-3" id="small-profile">
+                    <div class="avatar">
+                      <img src="img/perfil.jpg" alt="Foto de Perfil" />
                     </div>
+                    <div class="details pt-3">
+                      <div class="username">Thiago Soares Mota</div>
+                      <div class="usertype">Super soberano admin</div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
 
-            <div id="conteudo" style="height: 100vh;">
+            <div class="col-md-5 mt-3 d-none d-md-block">
+              <div class="custom-search-bar">
+                <input type="text" placeholder="Pesquisar aqui" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
             </div>
 
+            <div class="col-md-4 mt-3 d-none d-md-block">
+              <div class="profile">
+                <div class="avatar">
+                  <img src="img/perfil.jpg" alt="Foto de Perfil" />
+                </div>
+                <div class="details">
+                  <div class="username">Thiago Soares Mota</div>
+                  <div class="usertype">Super soberano admin</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="conteudo" style="height: 100vh">
+            <div class="container">
+              <div class="row mt-5">
+                <div class="col">
+                  <div class="centered-text">
+                    <div class="icon-fix">
+                      <i class="fas fa-solid fa-wrench"></i>
+                    </div>
+                    <h1>No Data</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
 
     <script src="script/index/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

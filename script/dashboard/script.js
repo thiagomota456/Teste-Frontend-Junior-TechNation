@@ -70,6 +70,6 @@ function updateReceitaChart() {
 }
 
 
-updateIndicators();
-updateInadimplenciaChart();
-updateReceitaChart();  
+document.addEventListener("DOMContentLoaded", updateIndicators);
+document.addEventListener("DOMContentLoaded", updateInadimplenciaChart);
+document.addEventListener("DOMContentLoaded", updateReceitaChart);
